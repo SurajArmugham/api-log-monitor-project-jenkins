@@ -1,0 +1,5 @@
+venv/
+__pycache__/
+logs/api_logs.txt
+Log_Monitor_Environment/
+.DS_Store
