@@ -33,7 +33,7 @@ pipeline {
             }
         }
 
-        stage('CD - Execute Monitoring') {
+        stage('CD - Execute Monitoring (PR Only') {
             when {
                 changeRequest()
             }
