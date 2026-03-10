@@ -1,6 +1,6 @@
 import requests
 import time
-from datetime import datetime, UTC
+from datetime import datetime, timezone
 from pathlib import Path
 
 # Log file location
@@ -34,7 +34,7 @@ def call_api(url):
 
 def write_log(method, endpoint, status, latency):
     """Write API call details to log file."""
-    timestamp = datetime.now(UTC).isoformat()
+    timestamp = datetime.now(timezone.utc).isoformat()
 
     log_entry = f"{timestamp} {method} {endpoint} {status} {latency}\n"
 
